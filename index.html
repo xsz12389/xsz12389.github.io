@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -129,147 +129,32 @@
             z-index: 2000;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 0 30px;
         }
         
-        .footer-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            color: white;
-            font-size: 14px;
-        }
-        
-        .footer-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        
+        .footer-center {
+            color: #fff !important;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            text-align: center !important;
+            text-shadow:
+                0 0 12px #00ff88,
+                0 0 4px #fff,
+                0 2px 12px rgba(0,255,136,0.35),
+                0 0px 4px #000;
+            letter-spacing: 2px !important;
+            opacity: 1 !important;
+        } 
         .social-links a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .social-links a:hover {
-            color: #00ff88;
-            background: rgba(0, 255, 136, 0.1);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
-        }
-        
-        .social-links svg {
-            transition: transform 0.3s ease;
-        }
-        
-        .social-links a:hover svg {
-            transform: scale(1.1);
-        }
-        
-        .version-info {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 12px;
-        }
-        
-        .info-panel {
-            position: fixed;
-            top: 100px;
-            left: 20px;
-            color: white;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1000;
-            max-width: 300px;
-        }
-        
-        .info-panel h1 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #00ff88;
-        }
-        
-        .info-panel p {
-            margin: 5px 0;
-            font-size: 14px;
-            line-height: 1.4;
-        }
-        
-        .controls {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            color: white;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1000;
-        }
-        
-        .controls p {
-            margin: 5px 0;
-            font-size: 12px;
-        }
-        
-        @media (max-width: 768px) {
-            .header {
-                padding: 0 15px;
-                height: 60px;
-            }
-            
-            .logo {
-                font-size: 20px;
-            }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .footer {
-                padding: 0 15px;
-                height: 50px;
-            }
-            
-            .footer-left {
-                font-size: 12px;
-            }
-            
-            .social-links {
-                gap: 10px;
-            }
-            
-            .info-panel {
-                top: 80px;
-                left: 10px;
-                right: 10px;
-                max-width: none;
-            }
-            
-            .controls {
-                bottom: 70px;
-                right: 10px;
-                left: 10px;
-            }
-        }
-    </style>
+    color: #fff !important;
+    text-shadow: 0 0 8px #00ff88, 0 0 2px #fff;
+}
+.social-links a:hover {
+    color: #00ff88 !important;
+    text-shadow: 0 0 12px #00ff88, 0 0 4px #fff;
+}
+   </style>
 </head>
 <body>
 <header class="header">
@@ -285,34 +170,6 @@
         </nav>
     </div>
     <div class="header-right">
-        <div class="status-indicator">
-            <div class="status-dot"></div>
-            <span>离线</span>
-        </div>
-    </div>
-</header>
-
-<canvas id="sphereCanvas"></canvas>
-
-<div class="info-panel">
-    <h1>🎯 开心一刻</h1>
-    <p><strong>希望你的幸运数字不是  ：</strong> 12389</p>
-    <p><strong>含义：</strong> 祝你好运！</p>
-    <p><strong>特性：</strong> 3D旋转、重力模拟、粒子轨迹</p>
-    <p><strong>交互：</strong> 鼠标拖拽控制旋转</p> 
-</div>
-
-<div class="controls">
-    <p>🖱️ 拖拽控制旋转</p>
-    <p>🔄 自动重力效果</p>
-    <p>✨ 粒子轨迹动画</p>
-</div>
-
-<footer class="footer">
-    <div class="footer-left">
-        <span>© 2025 巡四组保留所有权</span>
-    </div>
-    <div class="footer-right">
         <div class="social-links">
             <a href="#" title="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -335,9 +192,14 @@
                 </svg>
             </a>
         </div>
-        <div class="version-info">
-            v1.0.0
-        </div>
+    </div>
+</header>
+
+<canvas id="sphereCanvas"></canvas>
+
+<footer class="footer">
+    <div class="footer-center">
+        <span>© 2025 巡四组保留所有权</span>
     </div>
 </footer>
 
